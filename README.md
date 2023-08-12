@@ -29,17 +29,17 @@ Make sure you have the following software installed:
 
 3. Open a terminal and navigate to the project directory.
 
-4. Run the following command to start the containers using Docker Compose:
+4. Run the following command to start the containers using Docker Compose: \n
 `docker compose up`
 
 ### Starting the project
 #### To start the backend
-1. In the folder of the app run:
-`dotnet watch run --urls=http://localhost:5600/`
+1. In the folder of the app run: \n
+`dotnet watch run --urls=http://localhost:5600/` \n
 We specify the 5600 port, as the client web app will listen to this port.
 After raning the backend app, an Swagger api page will be automatiaclly opened, you can interact with the backened from it.
 #### To start frontend
-1. Run index.html file from VotesApp/Pages folder.
+1. Run `index.html` file from `VotesApp/Pages` folder.
 
 ## API Endpoints
 [POST] Login: Authenticate a user and receive an authentication token.
