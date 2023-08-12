@@ -6,14 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginButton = document.querySelector(".btn-login");
     
     console.log(loginButton)
-    // Add a click event listener to the login button
+
     loginButton.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the form from submitting
-  
-      // Get the entered username and password
+      event.preventDefault();
+
       const username = usernameInput.value;
       const password = passwordInput.value;
-      // Create an object with the login data
+
       const loginData = {
         userName: username,
         password: password,
@@ -21,10 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
       console.log(loginData)
-      // Replace 'YOUR_LOGIN_API_URL' with the actual URL of your login endpoint
       const apiUrl = baseUrl+"/Login";
   
-      // Make a POST request to the login endpoint using the fetch API
       fetch(apiUrl, {
         method: "POST",
         headers: {

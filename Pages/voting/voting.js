@@ -64,7 +64,6 @@ function fetchCandidates() {
   }
 
   document.addEventListener("DOMContentLoaded", function () {  
-    console.log("Hello world")
     fetchCandidates();
     addLogoutEventListener();
   })

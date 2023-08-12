@@ -43,7 +43,7 @@ builder.Services.AddSwaggerGen(swagger =>
 var Configuration = builder.Configuration;
 builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
     {
-        builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+        builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader().SetIsOriginAllowed(origin => true);
     }));
 builder.Services
           .AddAuthentication(opt =>
