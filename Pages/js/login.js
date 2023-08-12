@@ -1,7 +1,6 @@
-import { baseUrl } from './Constants'
+const baseUrl = "http://localhost:5600"
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Get references to the input fields and login button
     const usernameInput = document.getElementById("username");
     const passwordInput = document.getElementById("password");
     const loginButton = document.querySelector(".btn-login");
@@ -36,8 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
       })
         .then((response) => response.json())
         .then((data) => {
-          localStorage.setItem('token', data.token);
-          window.location.replace('voting/voting.html')
+          token = data.token
+          if (token) {
+            localStorage.setItem('token', token);
+            window.location.replace('voting/voting.html')
+          } else if (message = data.message) {
+            alert(message)
+          }
+          
         })
         .catch((error) => {
             alert(error)

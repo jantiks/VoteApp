@@ -52,5 +52,19 @@ function fetchCandidates() {
         console.error('Error voting:', error);
       });
   }
-  
-  fetchCandidates();
+
+  function addLogoutEventListener() {
+    const logoutButton = document.querySelector(".logout");
+    console.log(logoutButton)
+
+    logoutButton.onclick = () => {
+        localStorage.removeItem("token");
+        window.location.replace('../index.html')
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {  
+    console.log("Hello world")
+    fetchCandidates();
+    addLogoutEventListener();
+  })

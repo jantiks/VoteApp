@@ -8,6 +8,5 @@ namespace RecipeApp.Models  {
         [Required, MinLength(2), MaxLength(30)]
         public string title { get; set; }
         public int votes { get; set; } = 0;
-        public List<int> votedIds {get; set; }
     }
 } 
