@@ -38,10 +38,9 @@ docker compose up
 #### To start the backend
 1. In the folder of the app run:
 ```bash
-dotnet watch run --urls=http://localhost:5600/
+dotnet restore
 ```
-We specify the 5600 port, as the client web app will listen to this port.
-After raning the backend app, an Swagger api page will be automatiaclly opened, you can interact with the backened from it.
+This downloads all the neccessary dependencies
 #### To start frontend
 1. Run `index.html` file from `VotesApp/Pages` folder.
 
